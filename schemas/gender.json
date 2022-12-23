@@ -2,5 +2,18 @@
   "$id": "gender.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Gender",
-  "description": "Das Schema für das Gender-Feld"
+  "description": "Das Schema für das Gender-Feld",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "pattern": "^https://d-nb.info/standards/vocab/gnd/gender#\\w*$",
+        "type": "string"
+      },
+      "label": {
+        "enum": ["Weiblich", "Männlich"]
+      }
+    }
+  }
 }
